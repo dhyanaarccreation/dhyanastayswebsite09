@@ -1,12 +1,16 @@
-import { SectionPlaceholder } from "@/components/ui/SectionPlaceholder";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { AppDownloadCta } from "@/components/sections/app-cta/AppDownloadCta";
 
 export default function AppPage() {
   return (
-    <SectionPlaceholder
-      jiraKey="DHN-24"
-      title="Access the Application"
-      description="Application preview, QR code, web app link, Android link, iOS link. Primary CTA: Open Dhyana Stays."
-      capability="demo"
-    />
+    <div className="mx-auto max-w-5xl px-6 pt-24">
+      <SectionHeading
+        eyebrow="Access the Application"
+        title="Everything here, now in your hands"
+        description="Planning, personalisation, booking and trip management all live in the Dhyana Stays app — this website is where you discover it first."
+        align="center"
+      />
+      <AppDownloadCta />
+    </div>
   );
 }
