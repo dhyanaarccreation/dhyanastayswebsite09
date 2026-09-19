@@ -25,7 +25,7 @@ export function AppDownloadCta() {
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <ButtonLink href="/app" variant="primary" className="bg-white text-brand-strong hover:bg-white/90">
+          <ButtonLink href="/app" variant="inverse">
             Explore the App
           </ButtonLink>
           <div className="flex items-center gap-2 rounded-full border border-white/30 px-5 py-3 text-sm text-white/80">
@@ -36,10 +36,10 @@ export function AppDownloadCta() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4 border-t border-white/15 pt-8 text-sm">
-          <ButtonLink href="/contact?as=host" variant="ghost" className="text-white hover:bg-white/10">
+          <ButtonLink href="/contact?as=host" variant="ghost-inverse">
             Host enquiry
           </ButtonLink>
-          <ButtonLink href="/contact?as=curator" variant="ghost" className="text-white hover:bg-white/10">
+          <ButtonLink href="/contact?as=curator" variant="ghost-inverse">
             Curator enquiry
           </ButtonLink>
         </div>

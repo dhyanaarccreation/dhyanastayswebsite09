@@ -91,7 +91,7 @@ export function Hero() {
       </p>
 
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-        <ButtonLink href="/app" variant="primary" className="bg-white text-brand-strong hover:bg-white/90">
+        <ButtonLink href="/app" variant="inverse">
           Explore the App
         </ButtonLink>
         <button
