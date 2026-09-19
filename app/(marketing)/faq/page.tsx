@@ -1,12 +1,5 @@
-import { SectionPlaceholder } from "@/components/ui/SectionPlaceholder";
+import { FaqAccordion } from "@/components/sections/faq/FaqAccordion";
 
 export default function FaqPage() {
-  return (
-    <SectionPlaceholder
-      jiraKey="DHN-25"
-      title="FAQ"
-      description="General, Traveller, Booking, Host, Travel Curator and Application frequently asked questions."
-      capability="live"
-    />
-  );
+  return <FaqAccordion />;
 }
