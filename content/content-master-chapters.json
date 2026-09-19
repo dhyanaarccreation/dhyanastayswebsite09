@@ -1,0 +1,690 @@
+{
+  "chapters": [
+    [
+      "01",
+      "HOME"
+    ],
+    [
+      "02",
+      "ABOUT DHYANA"
+    ],
+    [
+      "03",
+      "EXPERIENCE BEYOND STAY"
+    ],
+    [
+      "04",
+      "CURATED STAYS"
+    ],
+    [
+      "05",
+      "EXPERIENCES"
+    ],
+    [
+      "06",
+      "TRAVEL GUIDES"
+    ],
+    [
+      "07",
+      "AI TRIP PLANNER"
+    ],
+    [
+      "08",
+      "SERVICES"
+    ],
+    [
+      "09",
+      "WHY DHYANA"
+    ],
+    [
+      "10",
+      "ECOSYSTEM"
+    ],
+    [
+      "11",
+      "FOR HOSTS"
+    ],
+    [
+      "12",
+      "APP FEATURES"
+    ],
+    [
+      "13",
+      "TESTIMONIALS"
+    ],
+    [
+      "14",
+      "FAQ"
+    ],
+    [
+      "15",
+      "CONTACT"
+    ],
+    [
+      "16",
+      "FOOTER"
+    ]
+  ],
+  "topics": {
+    "01": [
+      [
+        "01.1",
+        "Hero",
+        "Create an immediate emotional connection through a cinematic premium landing experience. Communicate \u201cExperience Beyond Stay\u201d and show that Dhyana is about curated stays, destinations and experiences, not only accommodation.",
+        "Full-screen video/visual; headline; supporting copy; primary Explore/Open App CTA; optional secondary CTA; scroll cue; mobile poster fallback; reduced-motion support"
+      ],
+      [
+        "01.2",
+        "What is Dhyana?",
+        "Give a concise definition of Dhyana Stays, the problem it addresses, and how curated stays, destinations, experiences and technology connect.",
+        "Brand definition; problem/opportunity; curated proposition; link to About"
+      ],
+      [
+        "01.3",
+        "Experience Beyond Stay",
+        "Make the brand philosophy the emotional centre: a trip combines stay, destination, food, culture, activities, wellness and events.",
+        "Stay; Destination; Food; Culture; Activities; Wellness; Events; Complete Journey"
+      ],
+      [
+        "01.4",
+        "Curated Stays",
+        "Show selective, high-quality properties through editorial storytelling rather than a crowded OTA grid.",
+        "Luxury/premium; nature/farm; unique architecture; couple; family; wellness; workation; tiny/unique stays; images/video; location; highlights; app CTA"
+      ],
+      [
+        "01.5",
+        "Experiences",
+        "Demonstrate that Dhyana connects accommodation with local discovery.",
+        "Local tours; food; culture; nature; adventure; wellness/yoga; farming; photography; workshops; music/events; property experiences"
+      ],
+      [
+        "01.6",
+        "Travel Guides",
+        "Introduce handpicked Travel Curators/influencers and real destination stories.",
+        "Profile; destination; Day 1/2/3 videos; Instagram/YouTube links or embeds; story; property first then itinerary; search by location/curator; Open in AI Planner; earning opportunity"
+      ],
+      [
+        "01.7",
+        "AI Trip Planner",
+        "Present AI as the personalisation layer. Users can start from preferences or a Travel Guide and customise rather than blindly copy an itinerary.",
+        "Destination/dates; travellers; occasion; budget; stay/experience preferences; AI itinerary preview; customise in app; AI Trip Guide; release-status label"
+      ],
+      [
+        "01.8",
+        "Why Dhyana",
+        "Summarise practical differentiation without vague claims.",
+        "Less noise; handpicked stays; storytelling; curated experiences; trusted curators; AI planning; complete journey"
+      ],
+      [
+        "01.9",
+        "Ecosystem",
+        "Visually explain the connected stakeholder model.",
+        "Traveller; Host; Travel Curator; Experience Provider; Dhyana; future architecture/investor/local-community relationships where approved"
+      ],
+      [
+        "01.10",
+        "App Features",
+        "Explain what happens after the website.",
+        "Discover; Stays; Experiences; Travel Guides; AI Planner; Itinerary; Booking; Traveller Dashboard; Support"
+      ],
+      [
+        "01.11",
+        "Testimonials",
+        "Build trust with genuine, approved feedback.",
+        "Traveller; Host; Curator stories; written/video; verified outcomes where available; responsive carousel/grid"
+      ],
+      [
+        "01.12",
+        "Final CTA",
+        "End with a clear next action.",
+        "Explore/Open App; QR; Host enquiry; Curator enquiry; short brand reminder"
+      ]
+    ],
+    "02": [
+      [
+        "02.1",
+        "Our Story",
+        "Explain the observation behind Dhyana: travellers face fragmented, noisy discovery while quality properties and local experiences can struggle with positioning and demand. Dhyana connects curation, architecture, hospitality, technology and destination storytelling.",
+        null
+      ],
+      [
+        "02.2",
+        "Vision",
+        "Describe the long-term ambition for a trusted, experience-led hospitality ecosystem connecting quality properties, destinations, communities and intelligent technology.",
+        null
+      ],
+      [
+        "02.3",
+        "Mission",
+        "Explain how Dhyana delivers the vision: curate quality stays, create destination experiences, generate demand through storytelling, support hosts, empower curators and personalise travel with AI.",
+        null
+      ],
+      [
+        "02.4",
+        "Beliefs",
+        "State guiding principles: quality over quantity; curation over noise; storytelling over generic listings; experiences over room-only travel; technology enhances hospitality; local communities matter; trust comes from real information.",
+        null
+      ],
+      [
+        "02.5",
+        "Dhyana Difference",
+        "Bring the combined model together: curated hospitality, architecture expertise, experience integration, Travel Curators, AI personalisation and an ecosystem approach.",
+        null
+      ]
+    ],
+    "03": [
+      [
+        "03.1",
+        "Stay",
+        "The foundation: distinctive, quality-conscious properties with clear information about architecture, setting, amenities and suitable traveller types.",
+        null
+      ],
+      [
+        "03.2",
+        "Destination",
+        "Explain place character, neighbourhoods, landscape, access, seasonality, local context and reasons to visit.",
+        null
+      ],
+      [
+        "03.3",
+        "Food",
+        "Local cuisine, curated food, property dining and authentic food discovery as part of destination identity.",
+        null
+      ],
+      [
+        "03.4",
+        "Culture",
+        "Heritage, traditions, art, crafts, communities and respectful cultural discovery.",
+        null
+      ],
+      [
+        "03.5",
+        "Activities",
+        "Tours, cycling, workshops, photography, nature, adventure, family activities and other approved activities.",
+        null
+      ],
+      [
+        "03.6",
+        "Wellness",
+        "Yoga, meditation, retreats, nature-based relaxation and approved wellness experiences.",
+        null
+      ],
+      [
+        "03.7",
+        "Events",
+        "Festivals, music, retreats, workshops, property events and community programmes where relevant and date-sensitive.",
+        null
+      ],
+      [
+        "03.8",
+        "Complete Journey",
+        "Show the full flow: choose stay \u2192 discover destination \u2192 add experiences \u2192 build itinerary \u2192 book \u2192 travel \u2192 receive support.",
+        null
+      ]
+    ],
+    "04": [
+      [
+        "04.1",
+        "What is a Curated Stay?",
+        "A property intentionally selected for its combination of guest experience, setting, design/architecture, cleanliness, safety, maintenance, sustainability, operational readiness and story.",
+        null
+      ],
+      [
+        "04.2",
+        "Selection Process",
+        "Explain the evaluation philosophy. Where applicable this can include property review, physical inspection, guest-readiness checks, amenities, maintenance and operational assessment. Publish only the approved public checklist.",
+        null
+      ],
+      [
+        "04.3",
+        "Stay Categories",
+        "Use categories to reduce noise: Luxury Collection, Tiny Houses, Farm Stays, Nature Escapes, Wellness Retreats, Weekend Getaways, Couple, Family, Pet-Friendly and Workation.",
+        null
+      ],
+      [
+        "04.4",
+        "Property Storytelling",
+        "Every property should have a story: architecture/interior, rooms/units, amenities, location, destination, activities, food, unique features and suitable traveller. Use video where available.",
+        null
+      ],
+      [
+        "04.5",
+        "Explore Stays",
+        "Website showcases selected properties and routes users to the app. Real-time availability, pricing, payment and booking management remain operational app functions.",
+        null
+      ]
+    ],
+    "05": [
+      [
+        "05.1",
+        "Local",
+        "Neighbourhood walks, local guides, community visits and destination-specific activities.",
+        null
+      ],
+      [
+        "05.2",
+        "Food",
+        "Curated meals, food trails, cooking, farm-to-table and property dining where verified.",
+        null
+      ],
+      [
+        "05.3",
+        "Culture",
+        "Heritage, crafts, art, music, festivals and community-led experiences.",
+        null
+      ],
+      [
+        "05.4",
+        "Nature",
+        "Beaches, forests, farms, landscapes, birding and low-impact nature experiences.",
+        null
+      ],
+      [
+        "05.5",
+        "Adventure",
+        "Cycling, trekking, water and other activities only where safety and operator readiness are verified.",
+        null
+      ],
+      [
+        "05.6",
+        "Wellness",
+        "Yoga, meditation, retreats, spa and slow-travel experiences where available.",
+        null
+      ],
+      [
+        "05.7",
+        "Property Experiences",
+        "Bonfires, farm activities, workshops, private dining, wellness and other experiences within a stay.",
+        null
+      ],
+      [
+        "05.8",
+        "Events",
+        "Time-bound retreats, cultural programmes, workshops, music and community events; live availability belongs in the app.",
+        null
+      ]
+    ],
+    "06": [
+      [
+        "06.1",
+        "Travel Curators",
+        "Profiles should show photo, bio, destinations, social channels and curated trips. Curators are handpicked rather than an open unverified directory.",
+        null
+      ],
+      [
+        "06.2",
+        "Travel Stories",
+        "Show why the creator visited, where they stayed, what they experienced and what made the trip memorable.",
+        null
+      ],
+      [
+        "06.3",
+        "Destination Guides",
+        "Location-based guides combine stays, food, experiences, local context and practical notes; support search by location and curator.",
+        null
+      ],
+      [
+        "06.4",
+        "Day-by-Day Trips",
+        "Present sequential Day 1/2/3 videos and connect each day to stay, experience or itinerary items.",
+        null
+      ],
+      [
+        "06.5",
+        "Influencer Itineraries",
+        "Do not simply copy/paste a creator itinerary. Open it in the AI Itinerary Creator so dates, budget, group, pace and preferences can be customised.",
+        null
+      ],
+      [
+        "06.6",
+        "Earn as Curator",
+        "Explain the opportunity at a high level: approved curators can share stays/itineraries through eligible referral or promo links and receive commissions under the approved commercial agreement. Do not publish an unapproved percentage.",
+        null
+      ]
+    ],
+    "07": [
+      [
+        "07.1",
+        "Dhyana AI",
+        "Travel planning assistant that understands destination, dates, traveller profile, budget and preferences. AI assists hospitality rather than replacing it.",
+        null
+      ],
+      [
+        "07.2",
+        "Trip Preferences",
+        "Destination, dates, traveller count, travel type, occasion, budget, stay style, food, activities, wellness/adventure, pace and constraints.",
+        null
+      ],
+      [
+        "07.3",
+        "AI Itinerary",
+        "Day-by-day plan with stays, experiences, routes and practical suggestions. Clearly distinguish recommendations from confirmed availability.",
+        null
+      ],
+      [
+        "07.4",
+        "Customisation",
+        "Users can modify the plan. A Travel Guide itinerary can be the starting point rather than a fixed itinerary.",
+        null
+      ],
+      [
+        "07.5",
+        "AI Trip Guide",
+        "Future/live capability for destination context, recommendations, itinerary help and support. Status must be clearly labelled.",
+        null
+      ],
+      [
+        "07.6",
+        "Booking",
+        "Intended flow: Plan \u2192 Review \u2192 Select \u2192 Book. Live availability, checkout and payment occur in the operational app/booking engine unless explicitly integrated.",
+        null
+      ]
+    ],
+    "08": [
+      [
+        "08.1",
+        "For Travellers",
+        "Curated stay discovery, destination inspiration, local experiences, Travel Guides, AI planning, itinerary customisation, booking and support.",
+        null
+      ],
+      [
+        "08.2",
+        "For Hosts",
+        "Property onboarding, positioning, storytelling, demand generation, marketing, hospitality consultancy, guest-experience improvement and\u2014where contracted\u2014property management. Commercial terms require approval.",
+        null
+      ],
+      [
+        "08.3",
+        "For Travel Curators",
+        "Access to curated stays/destinations, content opportunities, itinerary curation, referral/promo mechanisms and eligible commission-based earning. Avoid unapproved commercial promises.",
+        null
+      ]
+    ],
+    "09": [
+      [
+        "09.1",
+        "Less Noise",
+        "Intentional curation narrows discovery so users can spend more time understanding suitable places.",
+        null
+      ],
+      [
+        "09.2",
+        "Handpicked",
+        "Properties are selected using an internal quality philosophy rather than simply maximising listing count.",
+        null
+      ],
+      [
+        "09.3",
+        "Storytelling",
+        "Video, photos, architecture, amenities, destination context and property stories help users understand what they are choosing.",
+        null
+      ],
+      [
+        "09.4",
+        "Experiences",
+        "Food, culture, nature, adventure, wellness, activities and events extend the journey beyond the room.",
+        null
+      ],
+      [
+        "09.5",
+        "Trusted Curators",
+        "Handpicked creators provide destination stories and first-hand inspiration with clear identification and permissions.",
+        null
+      ],
+      [
+        "09.6",
+        "AI",
+        "AI converts preferences and inspiration into a personalised plan and lets travellers customise a Travel Guide itinerary.",
+        null
+      ],
+      [
+        "09.7",
+        "Complete Journey",
+        "Dhyana connects discovery, stay selection, experiences, itinerary planning and app-based booking/support.",
+        null
+      ]
+    ],
+    "10": [
+      [
+        "10.1",
+        "Traveller",
+        "Discovers stays and experiences, uses Guides and AI, builds an itinerary and completes the journey in the app.",
+        null
+      ],
+      [
+        "10.2",
+        "Host",
+        "Provides a stay and participates through onboarding, storytelling, demand generation and hospitality support.",
+        null
+      ],
+      [
+        "10.3",
+        "Travel Curator",
+        "Creates destination stories, explores curated stays, shares experiences and can refer travellers through approved mechanisms.",
+        null
+      ],
+      [
+        "10.4",
+        "Experience Provider",
+        "Supplies local food, culture, nature, adventure, wellness, activities or events.",
+        null
+      ],
+      [
+        "10.5",
+        "Dhyana",
+        "Connects curation, storytelling, technology, partnerships, demand generation and the traveller journey.",
+        null
+      ]
+    ],
+    "11": [
+      [
+        "11.1",
+        "Host Problems",
+        "Fragmented demand, OTA dependence, difficulty standing out, weak storytelling/positioning, operational gaps and difficulty reaching suitable travellers.",
+        null
+      ],
+      [
+        "11.2",
+        "Dhyana Solution",
+        "Curated discovery, property storytelling, destination marketing, Travel Curator collaborations and complete guest experience. Do not guarantee occupancy/revenue.",
+        null
+      ],
+      [
+        "11.3",
+        "Property Onboarding",
+        "Initial conversation \u2192 property assessment \u2192 information/media collection \u2192 content preparation \u2192 listing setup \u2192 quality checks \u2192 campaign preparation \u2192 launch. Treat timing as internal operations.",
+        null
+      ],
+      [
+        "11.4",
+        "Marketing",
+        "Property video/photos, destination storytelling, social content, Travel Curators, cluster/region campaigns and targeted demand generation.",
+        null
+      ],
+      [
+        "11.5",
+        "Hospitality Consultancy",
+        "Support with USP, storytelling, guest experience, architecture/interior direction, hospitality standards and operational readiness.",
+        null
+      ],
+      [
+        "11.6",
+        "Property Management",
+        "Where contracted: guest communication, operations, occupancy optimisation, standards and reporting. Exact scope/fee must be contractual.",
+        null
+      ],
+      [
+        "11.7",
+        "Become a Host",
+        "Enquiry form: property, location, contact, type, approximate inventory, current status and partnership interest; include consent/privacy.",
+        null
+      ]
+    ],
+    "12": [
+      [
+        "12.1",
+        "Discover",
+        "Explore destinations, curated collections, stories and recommendations.",
+        null
+      ],
+      [
+        "12.2",
+        "Stays",
+        "View property story, photos/video, location, amenities, availability/pricing when live and booking actions.",
+        null
+      ],
+      [
+        "12.3",
+        "Experiences",
+        "Discover local, food, culture, nature, adventure, wellness, property and event experiences.",
+        null
+      ],
+      [
+        "12.4",
+        "Travel Guides",
+        "Browse curators, watch stories, open guides and use itineraries as AI customisation starting points.",
+        null
+      ],
+      [
+        "12.5",
+        "AI Planner",
+        "Enter constraints/preferences, generate a plan, review options and refine.",
+        null
+      ],
+      [
+        "12.6",
+        "Itinerary",
+        "View day-by-day plans, combine stays and experiences and manage selections.",
+        null
+      ],
+      [
+        "12.7",
+        "Booking",
+        "Operational booking, payment, confirmation and management through the approved application.",
+        null
+      ],
+      [
+        "12.8",
+        "Traveller Dashboard",
+        "Current trip status, itinerary, booking details, updates/documents and support.",
+        null
+      ],
+      [
+        "12.9",
+        "Support",
+        "Traveller assistance and, when actually launched and tested, emergency/SOS pathways.",
+        null
+      ]
+    ],
+    "13": [
+      [
+        "13.1",
+        "Travellers",
+        "Feedback on property, destination, experiences, planning and overall journey.",
+        null
+      ],
+      [
+        "13.2",
+        "Hosts",
+        "Verified feedback on onboarding, storytelling, marketing, guest experience or operational support; avoid unsupported guarantees.",
+        null
+      ],
+      [
+        "13.3",
+        "Travel Curators",
+        "Feedback on curated stays, destination experiences and creator collaboration.",
+        null
+      ]
+    ],
+    "14": [
+      [
+        "14.1",
+        "Traveller",
+        "What is Dhyana? How are stays curated? Where is it available? How do Guides work? Can an influencer itinerary be customised? How does AI work? How do I book?",
+        null
+      ],
+      [
+        "14.2",
+        "Host",
+        "How can I list? What is onboarding? What media is needed? How are properties marketed? What support is available? How do I contact the host team?",
+        null
+      ],
+      [
+        "14.3",
+        "Travel Curator",
+        "Who can apply? How are curators selected? What content can I create? How do referral/promo links work? How are eligible commissions handled? How do I apply?",
+        null
+      ]
+    ],
+    "15": [
+      [
+        "15.1",
+        "General",
+        "Official company contact information, social links and general enquiry route.",
+        null
+      ],
+      [
+        "15.2",
+        "Traveller",
+        "Questions about destinations, stays, experiences, app access or bookings; route app-support cases appropriately.",
+        null
+      ],
+      [
+        "15.3",
+        "Host",
+        "Property partnership, onboarding, hospitality consultancy, marketing and property management.",
+        null
+      ],
+      [
+        "15.4",
+        "Travel Curator",
+        "Applications, collaboration, content partnerships and referral opportunities.",
+        null
+      ],
+      [
+        "15.5",
+        "Partnership",
+        "Experience providers, brands, communities, tourism organisations, technology and strategic partnerships.",
+        null
+      ]
+    ],
+    "16": [
+      [
+        "16.1",
+        "Explore",
+        "Curated Stays, Experiences, Travel Guides, Destinations and other primary discovery areas.",
+        null
+      ],
+      [
+        "16.2",
+        "Services",
+        "Traveller, Host and Travel Curator services.",
+        null
+      ],
+      [
+        "16.3",
+        "Company",
+        "About, Story, Vision/Mission, Contact and approved company pages.",
+        null
+      ],
+      [
+        "16.4",
+        "App",
+        "Download/access, app features and QR/store CTA.",
+        null
+      ],
+      [
+        "16.5",
+        "Legal",
+        "Privacy Policy, Terms, Cookie Policy and other required legal/compliance pages.",
+        null
+      ],
+      [
+        "16.6",
+        "Social Media",
+        "Verified official Instagram, YouTube, LinkedIn and other approved channels.",
+        null
+      ]
+    ]
+  }
+}
