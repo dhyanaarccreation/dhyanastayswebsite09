@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-// Font loading via next/font is part of the documented stack (DHN-35), but the
-// brand typeface hasn't been chosen yet. Swap this default system-font stack
-// for `next/font/google` or `next/font/local` once the client confirms one —
-// self-hosting Google Fonts at build time requires outbound network access,
-// so a self-hosted local font file is the more portable choice for CI.
+// Playfair Display (display serif) + Inter (sans) approximate the pairing seen
+// in the client's UI Reference PDF — not a confirmed brand typeface. Swap for
+// `next/font/local` once the client supplies real font files (DHN-35).
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
 
 export const metadata: Metadata = {
   title: "Dhyana Stays — Experience Beyond Stay",
@@ -16,7 +20,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" suppressHydrationWarning className="h-full font-sans antialiased">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`h-full font-sans antialiased ${inter.variable} ${playfairDisplay.variable}`}
+    >
       <body className="min-h-full flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}

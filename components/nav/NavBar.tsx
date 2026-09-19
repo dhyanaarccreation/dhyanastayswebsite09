@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { ButtonLink } from "@/components/ui/Button";
 
 // DHN-12 — Sticky Navigation & Mobile Menu (POC)
 // Dropdown structure per PROJECT_BRIEF.md §3. Placeholder links — wire up
@@ -23,7 +24,7 @@ export function NavBar() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur dark:border-white/10 dark:bg-black/80">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold tracking-tight">
+        <Link href="/" className="font-display text-lg font-semibold tracking-tight">
           Dhyana Stays
         </Link>
 
@@ -37,12 +38,9 @@ export function NavBar() {
           ))}
         </ul>
 
-        <Link
-          href="/app"
-          className="hidden rounded-full bg-black px-5 py-2 text-sm font-medium text-white md:inline-block dark:bg-white dark:text-black"
-        >
+        <ButtonLink href="/app" variant="primary" className="hidden md:inline-flex">
           Explore the App
-        </Link>
+        </ButtonLink>
 
         <button
           className="md:hidden"

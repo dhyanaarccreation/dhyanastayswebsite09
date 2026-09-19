@@ -8,18 +8,20 @@ type Capability = "live" | "demo" | "coming-soon";
  * on the real component so it stays traceable back to the backlog.
  */
 export function SectionPlaceholder({
+  id,
   jiraKey,
   title,
   description,
   capability = "coming-soon",
 }: {
+  id?: string;
   jiraKey: string;
   title: string;
   description: string;
   capability?: Capability;
 }) {
   return (
-    <section className="mx-auto flex max-w-4xl flex-col items-start gap-4 px-6 py-24">
+    <section id={id} className="mx-auto flex max-w-4xl flex-col items-start gap-4 px-6 py-24">
       <span className="font-mono text-xs opacity-50">{jiraKey}</span>
       <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h1>
       <p className="max-w-2xl text-base leading-7 opacity-70">{description}</p>

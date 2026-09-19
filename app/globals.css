@@ -2,22 +2,45 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/*
+ * Brand tokens below are a best-effort match to the client-supplied
+ * "Dhyana Stays - Full UI Reference.pdf" (screenshots of the actual
+ * Application), not an approved brand spec — no exact hex/font files have
+ * been confirmed by the client yet. Kept as a small set of variables here
+ * so the whole site can be recolored/retyped from one place once real
+ * brand assets arrive.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f5f0;
+  --foreground: #1c1c1a;
+  --surface: #ffffff;
+  --brand: #33513f;
+  --brand-strong: #253a2d;
+  --brand-soft: #e4ebe3;
+  --border-subtle: rgba(28, 28, 26, 0.08);
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #14170f;
+  --foreground: #f2f1ec;
+  --surface: #1b1f16;
+  --brand: #7fa98d;
+  --brand-strong: #a4c7ac;
+  --brand-soft: #232c22;
+  --border-subtle: rgba(242, 241, 236, 0.1);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans:
-    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
+  --color-surface: var(--surface);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-border-subtle: var(--border-subtle);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     monospace;
