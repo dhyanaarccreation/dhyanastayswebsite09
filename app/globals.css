@@ -3,21 +3,22 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /*
- * Brand tokens below are a best-effort match to the client-supplied
+ * Brand tokens below are pixel-sampled from the client-supplied
  * "Dhyana Stays - Full UI Reference.pdf" (screenshots of the actual
- * Application), not an approved brand spec — no exact hex/font files have
- * been confirmed by the client yet. Kept as a small set of variables here
- * so the whole site can be recolored/retyped from one place once real
- * brand assets arrive.
+ * Application: Home, Explore Stays, Contact, FAQ, a stay detail page) —
+ * not an approved written brand spec, but measured directly from the
+ * app's rendered UI rather than eyeballed. Kept as a small set of
+ * variables here so the whole site can be recolored/retyped from one
+ * place once official brand assets arrive.
  */
 :root {
-  --background: #f7f5f0;
-  --foreground: #1c1c1a;
+  --background: #f0f0f0;
+  --foreground: #2b2b2b;
   --surface: #ffffff;
-  --brand: #33513f;
-  --brand-strong: #253a2d;
-  --brand-soft: #e4ebe3;
-  --border-subtle: rgba(28, 28, 26, 0.08);
+  --brand: #2e6f40;
+  --brand-strong: #235233;
+  --brand-soft: #dde3df;
+  --border-subtle: rgba(43, 43, 43, 0.08);
 }
 
 .dark {

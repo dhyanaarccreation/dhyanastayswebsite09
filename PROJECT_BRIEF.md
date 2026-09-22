@@ -63,6 +63,23 @@ No tech-stack decision has been formally locked for the **website** codebase spe
 
 ## 3. Information Architecture / Sitemap
 
+> **Update (2026-09-22):** DHN-54 (Travel Guides Section) and DHN-55 (For
+> Hosts Dedicated Page) are now built — see §4's amendment below. As part of
+> that work the client decided to remove the `/services/*` Services Tabs
+> section entirely (DHN-19) rather than keep it alongside the new dedicated
+> `/for-hosts` page; there is currently no dedicated page for the
+> Travellers/Travel-Curators "services" audiences that section used to
+> cover. The primary nav was also restructured by explicit client request:
+> Experience / Curated Stays / Travel Guides / AI Planner (four flat links)
+> are now one **"Experiences"** dropdown, which also folds in the separate
+> `/experiences` page (Experiences Showcase Grid, previously footer-only) —
+> see `components/nav/NavBar.tsx`. A second dropdown, **"Blog"**, was added
+> for a Traveller Preference Quiz received as a patch from another session
+> (placeholder only — see §4's second amendment). The sitemap/nav below is
+> the **original** planned IA from the client's source docs — kept as-is for
+> traceability — and no longer matches the shipped site exactly on these
+> points.
+
 ```
 /                          HOME (full storytelling journey lives here)
 ├── /about
@@ -128,6 +145,14 @@ No tech-stack decision has been formally locked for the **website** codebase spe
 - **For Hosts** is far deeper in the Master Content Document (host problems, Dhyana's solution, property onboarding, marketing, hospitality consultancy, property management, become-a-host flow) than the original "Services tab" treatment (DHN-19) implies — client docs suggest a full dedicated page, not just a tab.
 
 Recommend confirming with the client whether to add `DHN-54 Travel Guides Section (POC)` and `DHN-55 For Hosts Dedicated Page (POC)` before or shortly after this initial build.
+
+> **Update (2026-09-22) — both built:**
+> - **DHN-54** is live at `/travel-guides` (`components/sections/travel-guides/TravelGuidesShowcase.tsx`), covering Chapter 06 topics 06.1–06.6.
+> - **DHN-55** is live at `/for-hosts` (`components/sections/for-hosts/ForHostsShowcase.tsx`), covering Chapter 11 topics 11.1–11.7, including the 11.7 Become-a-Host enquiry form.
+> - As part of this, the client decided to **remove** the DHN-19 Services Tabs section and all `/services/*` routes rather than keep them alongside the new dedicated For Hosts page — see the §3 amendment above.
+> - The 11.7 Become-a-Host form (and the existing DHN-26 Contact form) now submit to a real API route (`app/api/leads/route.ts`) that appends each submission to a server-side Excel workbook (`data/leads.xlsx`), so the client can report/analyse enquiries — a deliberate, scoped exception to §6 rule 2's "front-end-only" rule. See README.md "Lead capture" for how it works and its durability caveats.
+>
+> **Second update (2026-09-22) — Traveller Preference Quiz, unresolved conflict:** a gamified 45-question traveller-preference survey was received as a git patch from a different session/agent, labeled `DHN-54`. That collides with DHN-54 already being Travel Guides (above) — **not resolved**, don't trust either mapping without checking the live Jira ticket. The patch's `content/traveller-quiz-data.ts` was also incomplete (cut off mid-file, missing several questions and all 8 archetype definitions), so only a `coming-soon` placeholder exists at `/traveller-quiz` (linked from a new "Blog" nav dropdown) pending the complete file.
 
 ---
 
@@ -299,7 +324,7 @@ Source: client-supplied **"Dhyana Stays Website Content Master Document v3.0"** 
 ## 6. Working Rules for Whoever Codes This
 
 1. **Capability labeling is non-negotiable.** Every feature demo (AI planner, booking flow, live itinerary, etc.) shown on the website must visually indicate whether it's live, a showcase/demo, or coming soon. Don't let a component "look real" if the backing feature doesn't exist yet.
-2. **This is a front-end-only build for now.** No database, no real API routes, no real auth, no payment gateway, no deployment config — matches the Application's current state (DHN-37). Use placeholder/sample content and static/mock data for the POC (DHN-5 explicitly calls for this).
+2. **This is a front-end-only build for now.** No database, no real API routes, no real auth, no payment gateway, no deployment config — matches the Application's current state (DHN-37). Use placeholder/sample content and static/mock data for the POC (DHN-5 explicitly calls for this). **One scoped exception (2026-09-22):** the DHN-26 Contact form and DHN-55 Become-a-Host form have a real API route (`app/api/leads/route.ts`) that writes submissions to a server-side Excel workbook, by explicit client request — see README.md "Lead capture". Don't take this as license to add other real backend behaviour without the same kind of explicit sign-off.
 3. **Don't fabricate content.** For chapters 02–16, only the topic purpose is confirmed from the client. If literal copy is needed to make the POC look real, mark it clearly as **placeholder copy — pending client draft** in code comments or a content TODO list, so it's never mistaken for approved copy.
 4. **Two open decisions block full scope lock-in** (see §4): Travel Guides and For Hosts may need dedicated sections/pages beyond what's currently in DHN-5's story list. Build the current 16 stories first; leave layout flexible enough to slot these in.
 5. **Suggested repo structure** (Next.js App Router, mirroring the sitemap in §3):

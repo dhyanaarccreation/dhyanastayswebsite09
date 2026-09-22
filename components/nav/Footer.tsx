@@ -5,6 +5,10 @@ import { Mail, Phone, MapPin, Instagram, Youtube, Linkedin } from "lucide-react"
 // FOOTER's approved topics (16.1-16.6: Explore, Services, Company, App,
 // Legal, Social Media). Contact facts are the real details found in the
 // client's UI Reference PDF — see PROJECT_BRIEF.md context, not placeholders.
+// The standalone "Services" column (DHN-19 Services Tabs: For Travellers /
+// For Hosts / For Travel Curators) was removed by client decision — For
+// Hosts became its own dedicated page (DHN-55) and is listed under Explore
+// instead; there is no dedicated page yet for Travellers/Curators services.
 
 const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
   {
@@ -14,14 +18,7 @@ const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
       { href: "/experiences", label: "Experiences" },
       { href: "/travel-guides", label: "Travel Guides" },
       { href: "/ai-trip-planner", label: "AI Planner" },
-    ],
-  },
-  {
-    title: "Services",
-    links: [
-      { href: "/services/travellers", label: "For Travellers" },
-      { href: "/services/hosts", label: "For Hosts" },
-      { href: "/services/travel-curators", label: "For Travel Curators" },
+      { href: "/for-hosts", label: "Become a Host & Business" },
     ],
   },
   {

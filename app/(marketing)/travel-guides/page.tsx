@@ -1,12 +1,8 @@
-import { SectionPlaceholder } from "@/components/ui/SectionPlaceholder";
+import { TravelGuidesShowcase } from "@/components/sections/travel-guides/TravelGuidesShowcase";
 
+// DHN-54 — Travel Guides Section (POC). Replaces the SectionPlaceholder that
+// previously stood in for this route while the client confirmed scope (see
+// PROJECT_BRIEF.md §4).
 export default function TravelGuidesPage() {
-  return (
-    <SectionPlaceholder
-      jiraKey="DHN-43 (content) / gap — see PROJECT_BRIEF §4"
-      title="Travel Guides"
-      description="Handpicked Travel Curators and destination stories — flagged in PROJECT_BRIEF.md §4 as a scope gap pending client confirmation (no dedicated POC story yet)."
-      capability="coming-soon"
-    />
-  );
+  return <TravelGuidesShowcase />;
 }

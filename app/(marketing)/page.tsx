@@ -4,7 +4,6 @@ import { ExperienceBeyondStay } from "@/components/sections/experience-beyond-st
 import { CuratedStaysShowcase } from "@/components/sections/curated-stays/CuratedStaysShowcase";
 import { WhyDhyana } from "@/components/sections/why-dhyana/WhyDhyana";
 import { ExperiencesShowcase } from "@/components/sections/experiences/ExperiencesShowcase";
-import { ServicesTabs } from "@/components/sections/services/ServicesTabs";
 import { AiTripPlannerShowcase } from "@/components/sections/ai-trip-planner/AiTripPlannerShowcase";
 import { EcosystemVisual } from "@/components/sections/ecosystem/EcosystemVisual";
 import { AppFeaturesShowcase } from "@/components/sections/app-features/AppFeaturesShowcase";
@@ -25,7 +24,6 @@ export default function HomePage() {
       <CuratedStaysShowcase />
       <WhyDhyana />
       <ExperiencesShowcase />
-      <ServicesTabs />
       <AiTripPlannerShowcase />
       <EcosystemVisual />
       <AppFeaturesShowcase />
