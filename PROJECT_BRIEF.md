@@ -79,6 +79,22 @@ No tech-stack decision has been formally locked for the **website** codebase spe
 > the **original** planned IA from the client's source docs — kept as-is for
 > traceability — and no longer matches the shipped site exactly on these
 > points.
+>
+> **Second update (2026-09-25) — Business hub replaces For Hosts:** the combined
+> nav/footer item "Become a Host & Business" was replaced by a single dedicated
+> **"Business"** item (`/business`, plus `/business/apply-influencer`). The
+> standalone **For Hosts page (DHN-55, `/for-hosts`) and its Become-a-Host form
+> were removed** — hosting now lives in the Business hub's "Host & List" tab,
+> whose CTAs go to the Contact form's Host category (`/contact?as=host`). The
+> DHN-55 files remain in git history (restore with `git checkout` if needed).
+> The Business hub was ported from the Application prototype's Business section
+> (`components/sections/business/`). Its programme copy — investment models and
+> revenue splits, influencer tiers, careers/volunteer blurbs, ad copy — is
+> **placeholder copy from the prototype, not the approved Master Content
+> Document**, and is marked as such on the page (§6 rule 3). The chatbot and
+> the influencer application are labelled "demo"; the influencer form has no
+> backend and does not use `/api/leads` (§6 rules 1 and 2) — its finish screen
+> points to `/contact?as=curator`.
 
 ```
 /                          HOME (full storytelling journey lives here)
@@ -148,9 +164,9 @@ Recommend confirming with the client whether to add `DHN-54 Travel Guides Sectio
 
 > **Update (2026-09-22) — both built:**
 > - **DHN-54** is live at `/travel-guides` (`components/sections/travel-guides/TravelGuidesShowcase.tsx`), covering Chapter 06 topics 06.1–06.6.
-> - **DHN-55** is live at `/for-hosts` (`components/sections/for-hosts/ForHostsShowcase.tsx`), covering Chapter 11 topics 11.1–11.7, including the 11.7 Become-a-Host enquiry form.
+> - **DHN-55** was live at `/for-hosts` (`components/sections/for-hosts/ForHostsShowcase.tsx`), covering Chapter 11 topics 11.1–11.7, including the 11.7 Become-a-Host enquiry form. **Removed 2026-09-25** — see the §3 second update.
 > - As part of this, the client decided to **remove** the DHN-19 Services Tabs section and all `/services/*` routes rather than keep them alongside the new dedicated For Hosts page — see the §3 amendment above.
-> - The 11.7 Become-a-Host form (and the existing DHN-26 Contact form) now submit to a real API route (`app/api/leads/route.ts`) that appends each submission to a server-side Excel workbook (`data/leads.xlsx`), so the client can report/analyse enquiries — a deliberate, scoped exception to §6 rule 2's "front-end-only" rule. See README.md "Lead capture" for how it works and its durability caveats.
+> - The 11.7 Become-a-Host form (removed 2026-09-25; only the DHN-26 Contact form remains) and the DHN-26 Contact form submitted to a real API route (`app/api/leads/route.ts`) that appends each submission to a server-side Excel workbook (`data/leads.xlsx`), so the client can report/analyse enquiries — a deliberate, scoped exception to §6 rule 2's "front-end-only" rule. See README.md "Lead capture" for how it works and its durability caveats.
 >
 > **Second update (2026-09-22) — Traveller Preference Quiz, unresolved conflict:** a gamified 45-question traveller-preference survey was received as a git patch from a different session/agent, labeled `DHN-54`. That collides with DHN-54 already being Travel Guides (above) — **not resolved**, don't trust either mapping without checking the live Jira ticket. The patch's `content/traveller-quiz-data.ts` was also incomplete (cut off mid-file, missing several questions and all 8 archetype definitions), so only a `coming-soon` placeholder exists at `/traveller-quiz` (linked from a new "Blog" nav dropdown) pending the complete file.
 
@@ -185,6 +201,10 @@ Source: client-supplied **"Dhyana Stays Website Content Master Document v3.0"** 
 - **01.10 App Features** — Explain what happens after the website.
   - Content/UI requirements: Discover; Stays; Experiences; Travel Guides; AI Planner; Itinerary; Booking; Traveller Dashboard; Support
 - **01.11 Testimonials** — Build trust with genuine, approved feedback.
+
+> **Update (2026-09-25):** the Testimonials section (DHN-23, `TestimonialsGrid`) was removed from the Home scroll at the project owner's request — testimonials will be placed on another page. The component is kept for reuse and still renders at `/testimonials` (not linked from the nav or footer). §6 rule 3 still applies wherever it returns: only genuine, permissioned quotes.
+
+> **Update (2026-09-25) — Home restyled to the Application's traveller / curated-stay-booking look (Home only):** the hero is now a rounded video card (`/motion-video.mp4`, the same file the Application's hero uses; not rendered for reduced-motion users) beside the approved headline/copy, with a floating capsule search bar; Curated Stays on Home is a colourful category-chip row plus big rounded photo cards (`components/sections/home/HomeStaysExplorer.tsx`, sample data shared via `curated-stays/stays-data.ts`); Experiences on Home use the same photo-card look (`variant="immersive"`); a green AI-planner banner and a floating "AI Planner" pill were added. **Section order is unchanged** (§4). **Rules kept:** the search bar is labelled "Showcase / Demo" — it only filters the sample stays by destination; dates/guests are display-only, and availability, prices and booking stay in the app (04.5); every sample card is tagged "Sample"; the AI banner/pill link to the labelled `/ai-trip-planner` showcase and make no live-AI claim. `/curated-stays`, `/experiences` and all other routes keep their own components (pinned by `tests/home-booking.spec.ts`).
   - Content/UI requirements: Traveller; Host; Curator stories; written/video; verified outcomes where available; responsive carousel/grid
 - **01.12 Final CTA** — End with a clear next action.
   - Content/UI requirements: Explore/Open App; QR; Host enquiry; Curator enquiry; short brand reminder
@@ -196,6 +216,8 @@ Source: client-supplied **"Dhyana Stays Website Content Master Document v3.0"** 
 - **02.3 Mission** — Explain how Dhyana delivers the vision: curate quality stays, create destination experiences, generate demand through storytelling, support hosts, empower curators and personalise travel with AI.
 - **02.4 Beliefs** — State guiding principles: quality over quantity; curation over noise; storytelling over generic listings; experiences over room-only travel; technology enhances hospitality; local communities matter; trust comes from real information.
 - **02.5 Dhyana Difference** — Bring the combined model together: curated hospitality, architecture expertise, experience integration, Travel Curators, AI personalisation and an ecosystem approach.
+
+> **Update (2026-09-25) — About copy finalized:** the project owner supplied final copy for two placements, replacing the earlier working copy. **Home** (`AboutTeaser.tsx`, keeps `id="about-dhyana"` for the Hero scroll): eyebrow "About Dhyana Stays", headline "Experience Beyond Stay", a short paragraph and a CTA to `/about`. **`/about`** (`AboutStory.tsx`): six blocks — Who We Are, Why We Started, What We Do (five capabilities), What Makes Us Different, Our Journey (Architecture → Stay Design → Hospitality → Experience → Dhyana Stays) and Our Vision — ending with an "Explore Dhyana Stays" CTA to `/curated-stays`. Wording is pinned by `tests/about.spec.ts`. The finalized copy does not cover 02.3 Mission or 02.4 Beliefs, and the earlier Website-vs-Application comparison table no longer appears on the site; the small print "No booking, payments or live AI planning happen on this website…" was kept under the About CTA (§6 rule 1).
 
 ### Chapter 03 — EXPERIENCE BEYOND STAY  (DHN-40)
 
@@ -324,7 +346,7 @@ Source: client-supplied **"Dhyana Stays Website Content Master Document v3.0"** 
 ## 6. Working Rules for Whoever Codes This
 
 1. **Capability labeling is non-negotiable.** Every feature demo (AI planner, booking flow, live itinerary, etc.) shown on the website must visually indicate whether it's live, a showcase/demo, or coming soon. Don't let a component "look real" if the backing feature doesn't exist yet.
-2. **This is a front-end-only build for now.** No database, no real API routes, no real auth, no payment gateway, no deployment config — matches the Application's current state (DHN-37). Use placeholder/sample content and static/mock data for the POC (DHN-5 explicitly calls for this). **One scoped exception (2026-09-22):** the DHN-26 Contact form and DHN-55 Become-a-Host form have a real API route (`app/api/leads/route.ts`) that writes submissions to a server-side Excel workbook, by explicit client request — see README.md "Lead capture". Don't take this as license to add other real backend behaviour without the same kind of explicit sign-off.
+2. **This is a front-end-only build for now.** No database, no real API routes, no real auth, no payment gateway, no deployment config — matches the Application's current state (DHN-37). Use placeholder/sample content and static/mock data for the POC (DHN-5 explicitly calls for this). **One scoped exception (2026-09-22):** the DHN-26 Contact form has a real API route (`app/api/leads/route.ts`) that writes submissions to a server-side Excel workbook, by explicit client request — see README.md "Lead capture". (The DHN-55 Become-a-Host form shared it until that page was removed on 2026-09-25; host enquiries now use the Contact form's Host category.) Don't take this as license to add other real backend behaviour without the same kind of explicit sign-off.
 3. **Don't fabricate content.** For chapters 02–16, only the topic purpose is confirmed from the client. If literal copy is needed to make the POC look real, mark it clearly as **placeholder copy — pending client draft** in code comments or a content TODO list, so it's never mistaken for approved copy.
 4. **Two open decisions block full scope lock-in** (see §4): Travel Guides and For Hosts may need dedicated sections/pages beyond what's currently in DHN-5's story list. Build the current 16 stories first; leave layout flexible enough to slot these in.
 5. **Suggested repo structure** (Next.js App Router, mirroring the sitemap in §3):

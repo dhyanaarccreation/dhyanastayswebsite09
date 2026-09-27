@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import { appendLead } from "@/lib/leads";
 
-// POST /api/leads — shared submission endpoint for the DHN-26 Contact form
-// and the DHN-55 Become-a-Host enquiry form. See lib/leads.ts and README.md
-// "Lead capture" for why this exists as a scoped exception to the
-// front-end-only rule. Requires the Node runtime (exceljs uses Node APIs
+// POST /api/leads — submission endpoint for the DHN-26 Contact form (whose
+// "Host" category now carries host enquiries — the standalone Become-a-Host
+// form was removed). See lib/leads.ts and README.md "Lead capture" for why
+// this exists as a scoped exception to the front-end-only rule. Requires the Node runtime (exceljs uses Node APIs
 // that aren't available on the Edge runtime).
 export const runtime = "nodejs";
 
@@ -41,44 +41,6 @@ export async function POST(request: Request) {
         email,
         categoryDetail: isNonEmptyString(categoryDetail) ? categoryDetail : "",
         message,
-      });
-      return NextResponse.json({ ok: true });
-    }
-
-    if (formType === "hostEnquiry") {
-      const {
-        propertyName,
-        location,
-        contactName,
-        email,
-        phone,
-        propertyType,
-        inventory,
-        status,
-        interest,
-        notes,
-        consent,
-      } = body;
-
-      if (
-        ![propertyName, location, contactName, email, phone, propertyType, status].every(isNonEmptyString) ||
-        consent !== true
-      ) {
-        return NextResponse.json({ ok: false, error: "Missing required fields." }, { status: 400 });
-      }
-
-      await appendLead("hostEnquiry", {
-        submittedAt: new Date().toISOString(),
-        propertyName,
-        location,
-        contactName,
-        email,
-        phone,
-        propertyType,
-        inventory: isNonEmptyString(inventory) || typeof inventory === "number" ? inventory : "",
-        status,
-        interest: Array.isArray(interest) ? interest.filter(isNonEmptyString).join(", ") : "",
-        notes: isNonEmptyString(notes) ? notes : "",
       });
       return NextResponse.json({ ok: true });
     }

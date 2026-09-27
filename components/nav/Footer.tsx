@@ -6,9 +6,11 @@ import { Mail, Phone, MapPin, Instagram, Youtube, Linkedin } from "lucide-react"
 // Legal, Social Media). Contact facts are the real details found in the
 // client's UI Reference PDF — see PROJECT_BRIEF.md context, not placeholders.
 // The standalone "Services" column (DHN-19 Services Tabs: For Travellers /
-// For Hosts / For Travel Curators) was removed by client decision — For
-// Hosts became its own dedicated page (DHN-55) and is listed under Explore
-// instead; there is no dedicated page yet for Travellers/Curators services.
+// For Hosts / For Travel Curators) was removed by client decision; there is
+// no dedicated page for Travellers/Curators services. Business (/business)
+// is listed under Explore as the dedicated hub — the standalone For Hosts
+// page (DHN-55, /for-hosts) was later removed and hosting now lives in the
+// Business hub's "Host & List" tab.
 
 const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
   {
@@ -18,7 +20,7 @@ const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
       { href: "/experiences", label: "Experiences" },
       { href: "/travel-guides", label: "Travel Guides" },
       { href: "/ai-trip-planner", label: "AI Planner" },
-      { href: "/for-hosts", label: "Become a Host & Business" },
+      { href: "/business", label: "Business" },
     ],
   },
   {

@@ -30,15 +30,17 @@ tests/               Playwright end-to-end tests
 
 Every route currently renders a `SectionPlaceholder` — swap each one out for the real section per the POC build order in `PROJECT_BRIEF.md` §4 (start with DHN-12 Nav / DHN-13 Hero).
 
-## Lead capture (Contact form + Become a Host)
+## Lead capture (Contact form)
 
-The DHN-26 Contact form and the DHN-55 Become-a-Host enquiry form (`/for-hosts`)
-both POST to `app/api/leads/route.ts`, which appends each submission as a row
-in `data/leads.xlsx` (two sheets: "Contact Enquiries" and "Host Enquiries"),
-via `lib/leads.ts` using `exceljs`. This is the **one** exception to the
+The DHN-26 Contact form POSTs to `app/api/leads/route.ts`, which appends each
+submission as a row in `data/leads.xlsx` (sheet "Contact Enquiries"), via
+`lib/leads.ts` using `exceljs`. Host enquiries come through the same form's
+"Host" category (`/contact?as=host`). This is the **one** exception to the
 front-end-only rule above — added by explicit client decision, since a
 lead-gen form that only shows a mock "thanks" screen doesn't let anyone
-actually report or analyse who enquired.
+actually report or analyse who enquired. (The former DHN-55 Become-a-Host form
+and its "Host Enquiries" sheet were removed; a workbook that already has that
+sheet keeps its rows — they are simply no longer added to.)
 
 - `data/` is git-ignored — it holds real visitor PII (names, emails, phone
   numbers, property locations) and must never be committed.
@@ -53,7 +55,7 @@ actually report or analyse who enquired.
   server with persistent storage (a VM, a container with a mounted volume,
   etc.), or migrating `lib/leads.ts` to a real database before real client
   leads depend on it long-term.
-- Both forms include a hidden honeypot field to drop obvious bot spam
+- The form includes a hidden honeypot field to drop obvious bot spam
   without adding a CAPTCHA dependency.
 
 ## Capability labeling — non-negotiable

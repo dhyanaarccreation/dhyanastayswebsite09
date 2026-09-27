@@ -16,6 +16,14 @@ import { ButtonLink } from "@/components/ui/Button";
 // That patch labeled the quiz DHN-54, which PROJECT_BRIEF.md already uses
 // for the Travel Guides Section (built at /travel-guides) — this conflict is
 // UNRESOLVED, see the placeholder page at app/(marketing)/traveller-quiz.
+// 2026-09-25: the combined "Become a Host & Business" item was replaced by a
+// single dedicated "Business" (/business) hub. The standalone "Become a Host"
+// item and its /for-hosts page were removed — hosting now lives in the
+// Business hub's "Host & List" tab, which routes to the Contact form's Host
+// category. See PROJECT_BRIEF.md §3 update.
+// 2026-09-25: "Experience Beyond Stay" was also removed from the Experiences
+// dropdown at the owner's request. The page (/experience-beyond-stay) and its
+// Home section still exist, reachable from the Home section's own link.
 
 type NavLink = { href: string; label: string };
 type NavItem = NavLink | { label: string; children: NavLink[] };
@@ -29,14 +37,13 @@ const PRIMARY_LINKS: NavItem[] = [
   {
     label: "Experiences",
     children: [
-      { href: "/experience-beyond-stay", label: "Experience Beyond Stay" },
       { href: "/curated-stays", label: "Curated Stays" },
       { href: "/experiences", label: "All Experiences" },
       { href: "/travel-guides", label: "Travel Guides" },
       { href: "/ai-trip-planner", label: "AI Trip Planner" },
     ],
   },
-  { href: "/for-hosts", label: "Become a Host & Business" },
+  { href: "/business", label: "Business" },
   {
     label: "Blog",
     children: [{ href: "/traveller-quiz", label: "Traveller Preference Quiz" }],
@@ -49,11 +56,13 @@ export function NavBar() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur dark:border-white/10 dark:bg-black/80">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-display text-lg font-semibold tracking-tight">
+        <Link href="/" className="shrink-0 font-display text-lg font-semibold tracking-tight">
           Dhyana<span className="text-brand">Stays</span>
         </Link>
 
-        <ul className="hidden items-center gap-8 text-sm font-medium md:flex">
+        {/* Tighter gap + nowrap at md: with five items the bar otherwise wraps
+            "Become a Host" and the CTA onto two lines around 768px. */}
+        <ul className="hidden items-center gap-5 text-sm font-medium whitespace-nowrap md:flex lg:gap-8">
           {PRIMARY_LINKS.map((item) =>
             isDropdown(item) ? (
               <li key={item.label} className="group relative">
@@ -93,7 +102,7 @@ export function NavBar() {
           )}
         </ul>
 
-        <ButtonLink href="/app" variant="primary" className="hidden md:inline-flex">
+        <ButtonLink href="/app" variant="primary" className="hidden whitespace-nowrap md:inline-flex">
           Explore the App
         </ButtonLink>
 

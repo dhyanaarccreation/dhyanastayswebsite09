@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { readLeadsWorkbookBuffer } from "@/lib/leads";
 
-// GET /api/leads/export — downloads the leads workbook (Contact Enquiries +
-// Host Enquiries sheets) as .xlsx, for reporting/analysis. Protected by
-// LEADS_EXPORT_TOKEN so lead PII (names, emails, phone numbers, property
-// locations) is never publicly downloadable — see README.md "Lead capture".
+// GET /api/leads/export — downloads the leads workbook (Contact Enquiries
+// sheet, plus any legacy Host Enquiries sheet already in the file) as .xlsx,
+// for reporting/analysis. Protected by LEADS_EXPORT_TOKEN so lead PII (names,
+// emails, phone numbers, property locations) is never publicly downloadable —
+// see README.md "Lead capture".
 // Disabled (503) by default until that env var is set.
 export const runtime = "nodejs";
 

@@ -2,15 +2,18 @@ import path from "node:path";
 import fs from "node:fs/promises";
 import ExcelJS from "exceljs";
 
-// Server-side lead capture for the DHN-26 Contact form and the DHN-55
-// Become-a-Host enquiry form. This is a deliberate, narrowly-scoped
-// EXCEPTION to PROJECT_BRIEF.md §6 rule 2 ("front-end-only, no real API
-// routes") — agreed with the client so submissions can be reported and
+// Server-side lead capture for the DHN-26 Contact form. This is a deliberate,
+// narrowly-scoped EXCEPTION to PROJECT_BRIEF.md §6 rule 2 ("front-end-only, no
+// real API routes") — agreed with the client so submissions can be reported and
 // analysed in Excel instead of only showing a mock "thanks" screen. See the
 // "Lead capture" section in README.md before relying on this in production:
 // it writes to a file on local disk, which does NOT survive on read-only or
 // ephemeral serverless filesystems (e.g. a default Vercel deploy) — it needs
 // a server with persistent storage, or migrating to a real database.
+//
+// The DHN-55 Become-a-Host form and its "Host Enquiries" sheet were removed.
+// An existing workbook keeps any rows already in that sheet: it is no longer
+// managed here, but exceljs carries unknown sheets through read/write intact.
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const LEADS_FILE = path.join(DATA_DIR, "leads.xlsx");
@@ -25,22 +28,6 @@ const SHEETS = {
       { header: "Email", key: "email", width: 26 },
       { header: "Category Detail", key: "categoryDetail", width: 32 },
       { header: "Message", key: "message", width: 50 },
-    ],
-  },
-  hostEnquiry: {
-    name: "Host Enquiries",
-    columns: [
-      { header: "Submitted At", key: "submittedAt", width: 22 },
-      { header: "Property Name", key: "propertyName", width: 24 },
-      { header: "Location", key: "location", width: 22 },
-      { header: "Contact Name", key: "contactName", width: 20 },
-      { header: "Email", key: "email", width: 26 },
-      { header: "Phone", key: "phone", width: 16 },
-      { header: "Property Type", key: "propertyType", width: 18 },
-      { header: "Approx. Inventory", key: "inventory", width: 16 },
-      { header: "Current Status", key: "status", width: 30 },
-      { header: "Partnership Interest", key: "interest", width: 36 },
-      { header: "Notes", key: "notes", width: 44 },
     ],
   },
 } as const;

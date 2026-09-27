@@ -8,52 +8,62 @@ import {
   Leaf,
   PartyPopper,
   ArrowRight,
+  type LucideIcon,
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ACCENTS, AccentIconTile, AccentSpot, type Accent } from "@/components/ui/AccentIconTile";
 
 // DHN-15 — Experience Beyond Stay Section (POC). Content basis: Home topic
 // 01.3 (approved pillar labels: Stay; Destination; Food; Culture; Activities;
 // Wellness; Events; Complete Journey) with each pillar's caption drawn from
 // Chapter 03's approved one-line topic purpose (content-master-chapters.json),
-// trimmed for card display rather than invented.
+// trimmed for card display rather than invented. The colourful icon tiles
+// (2026-09-25) are presentation only — see components/ui/AccentIconTile.tsx.
 
-const PILLARS = [
+const PILLARS: { icon: LucideIcon; accent: Accent; label: string; caption: string }[] = [
   {
     icon: BedDouble,
+    accent: "violet",
     label: "Stay",
     caption: "Distinctive, quality-conscious properties with clear architecture, setting and amenities.",
   },
   {
     icon: MapPin,
+    accent: "sky",
     label: "Destination",
     caption: "Place character, neighbourhoods, landscape and reasons to visit.",
   },
   {
     icon: UtensilsCrossed,
+    accent: "amber",
     label: "Food",
     caption: "Local cuisine, curated food and authentic dining as part of destination identity.",
   },
   {
     icon: Landmark,
+    accent: "rose",
     label: "Culture",
     caption: "Heritage, traditions, art, crafts and respectful cultural discovery.",
   },
   {
     icon: Compass,
+    accent: "teal",
     label: "Activities",
     caption: "Tours, cycling, workshops, photography, nature and adventure.",
   },
   {
     icon: Leaf,
+    accent: "emerald",
     label: "Wellness",
     caption: "Yoga, meditation, retreats and nature-based relaxation.",
   },
   {
     icon: PartyPopper,
+    accent: "fuchsia",
     label: "Events",
     caption: "Festivals, music, retreats and property events, where date-sensitive.",
   },
-] as const;
+];
 
 const JOURNEY_STEPS = [
   "Choose stay",
@@ -76,16 +86,17 @@ export function ExperienceBeyondStay() {
       />
 
       <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-        {PILLARS.map(({ icon: Icon, label, caption }) => (
+        {PILLARS.map(({ icon, accent, label, caption }) => (
           <div
             key={label}
-            className="rounded-2xl border border-border-subtle bg-surface p-6 transition-colors hover:border-brand/40"
+            className={`group relative overflow-hidden rounded-2xl border border-border-subtle bg-surface p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg motion-reduce:transition-none motion-reduce:hover:translate-y-0 ${ACCENTS[accent].border}`}
           >
-            <div className="flex size-10 items-center justify-center rounded-full bg-brand-soft text-brand">
-              <Icon size={20} />
+            <AccentSpot accent={accent} />
+            <div className="relative">
+              <AccentIconTile icon={icon} accent={accent} />
+              <h3 className="mt-5 font-display text-lg font-semibold">{label}</h3>
+              <p className="mt-2 text-sm leading-6 opacity-70">{caption}</p>
             </div>
-            <h3 className="mt-4 font-display text-lg font-semibold">{label}</h3>
-            <p className="mt-2 text-sm leading-6 opacity-70">{caption}</p>
           </div>
         ))}
         <Link

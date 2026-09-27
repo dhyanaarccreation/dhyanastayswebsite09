@@ -1,61 +1,22 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin, ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PlaceholderNote } from "@/components/ui/PlaceholderNote";
 import { ButtonLink } from "@/components/ui/Button";
+import { CATEGORIES, SAMPLE_STAYS, type Category } from "./stays-data";
 
 // DHN-16 — Curated Stays Showcase (POC). Content basis: Home topic 01.4
 // (approved: Luxury/premium; nature/farm; unique architecture; couple; family;
 // wellness; workation; tiny/unique stays; images/video; location; highlights;
 // app CTA) and Chapter 04.3 Stay Categories. Property names below are sample
-// data for POC layout only (rule 3) — no real photography, pricing or
-// availability is shown, since 04.5 reserves live pricing/availability for
-// the app.
-
-const CATEGORIES = ["All", "Tiny House", "Farm Stay", "Wellness Retreat", "Luxury Villa", "Heritage Home"] as const;
-
-type Category = (typeof CATEGORIES)[number];
-
-const SAMPLE_STAYS: {
-  name: string;
-  location: string;
-  category: Exclude<Category, "All">;
-  highlight: string;
-}[] = [
-  {
-    name: "The Canopy Tiny House",
-    location: "Auroville, Tamil Nadu",
-    category: "Tiny House",
-    highlight: "A minimalist retreat built around ancient mango trees.",
-  },
-  {
-    name: "Nila Wellness Retreat",
-    location: "Palakkad, Kerala",
-    category: "Wellness Retreat",
-    highlight: "Ayurvedic therapies with a resident wellness team.",
-  },
-  {
-    name: "The Glass Pavilion",
-    location: "Wayanad, Kerala",
-    category: "Luxury Villa",
-    highlight: "Floor-to-ceiling glass architecture over a private pool.",
-  },
-  {
-    name: "Heritage Courtyard Villa",
-    location: "Karaikudi, Tamil Nadu",
-    category: "Heritage Home",
-    highlight: "A restored Chettinad mansion with original courtyards.",
-  },
-  {
-    name: "Vaksana Farms",
-    location: "Near Tindivanam, Tamil Nadu",
-    category: "Farm Stay",
-    highlight: "A working organic farm reimagined as four unique stays.",
-  },
-];
+// data for POC layout only (rule 3) — no pricing or availability is shown,
+// since 04.5 reserves live pricing/availability for the app.
+// Sample data and stock-photo sources live in ./stays-data.ts (shared with the
+// Home explorer).
 
 export function CuratedStaysShowcase() {
   const [active, setActive] = useState<Category>("All");
@@ -92,8 +53,17 @@ export function CuratedStaysShowcase() {
             key={stay.name}
             className="overflow-hidden rounded-2xl border border-border-subtle bg-surface"
           >
-            <div className="flex h-40 items-center justify-center bg-linear-to-br from-brand-soft to-brand/20 text-xs font-medium tracking-[0.15em] text-brand/70 uppercase">
-              {stay.category}
+            <div className="relative h-48 bg-brand-soft">
+              <Image
+                src={stay.image}
+                alt={stay.alt}
+                fill
+                sizes="(min-width: 1024px) 352px, (min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+              <span className="absolute top-3 left-3 rounded-full bg-surface/90 px-3 py-1 text-[11px] font-medium tracking-wide text-brand uppercase backdrop-blur">
+                {stay.category}
+              </span>
             </div>
             <div className="p-5">
               <h3 className="font-display text-lg font-semibold">{stay.name}</h3>
@@ -108,8 +78,8 @@ export function CuratedStaysShowcase() {
       </div>
 
       <PlaceholderNote>
-        Sample stays shown for layout purposes — final property selection and
-        photography are pending.
+        Sample stays and stock photography shown for layout purposes — final
+        property selection and photography are pending.
       </PlaceholderNote>
 
       <div className="mt-8 flex flex-wrap items-center gap-4">
